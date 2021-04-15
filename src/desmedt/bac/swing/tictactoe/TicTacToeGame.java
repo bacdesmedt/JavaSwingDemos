@@ -37,9 +37,11 @@ public class TicTacToeGame extends JFrame implements GameGridLayout.OnPlayListen
     }
 
     @Override
-    public void onWin(boolean isPlayerX) {
+    public void onGameEnd(boolean isPlayerX, boolean draw) {
+        String onWin = String.format("\tPlayer %d wins! Play Again?", isPlayerX ? 1 : 2);
+        String onDraw = "\tIt's a draw! Play Again?";
         JLabel mLabel = new JLabel(
-                String.format("\tPlayer %d wins! Play Again?", isPlayerX ? 1 : 2),
+                draw ? onDraw : onWin,
                 SwingConstants.CENTER
         );
         int choice = JOptionPane.showConfirmDialog(

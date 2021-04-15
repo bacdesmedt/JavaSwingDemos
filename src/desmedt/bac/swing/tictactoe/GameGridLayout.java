@@ -22,7 +22,7 @@ public class GameGridLayout extends JPanel implements ActionListener {
     }
 
     public interface OnPlayListener {
-        void onWin(boolean isPlayerX);
+        void onGameEnd(boolean isPlayerX, boolean draw);
         void onEndTurn(boolean isPlayerX);
     }
 
@@ -62,12 +62,23 @@ public class GameGridLayout extends JPanel implements ActionListener {
             }
         }
     }
+    
+    private boolean movesLeft() {
+        for (XOButton button : buttons) {
+            if (!button.isPressed()) return true;
+        }
+        return false;
+    }
 
     //WIN LOGIC
     private void checkIfWon(boolean[] checkStates, boolean isPlayerX) {
         if (isWon(checkStates)) {
             for (OnPlayListener listener : listeners) {
-                listener.onWin(isPlayerX);
+                listener.onGameEnd(isPlayerX, false);
+            }
+        } else if (!movesLeft()) {
+            for (OnPlayListener listener : listeners) {
+                listener.onGameEnd(isPlayerX, true);
             }
         }
     }
