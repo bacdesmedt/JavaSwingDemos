@@ -1,8 +1,31 @@
 package desmedt.bac.swing.quiz;
 
+import javax.swing.*;
 import java.util.ArrayList;
 
-public class QuizApp {
+public class QuizApp  extends JFrame {
+    
+    private final ArrayList<Question> questions = new ArrayList<>();
+    public QuizApp() {
+        super("Quiz Game");
+        setResizable(true);
+        setSize(500,400);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        
+        
+        for (String question : QUESTIONS_ARRAY) {
+            questions.add(new Question(question));
+        }
+        
+        add(new QuestionView(questions.get(6)));
+    
+        setVisible(true);
+    }
+    
+    public static void main(String[] args) {
+        new QuizApp();
+    }
+    
     private static final String[] QUESTIONS_ARRAY = {
             "0_What is the most common element in the universe?_Hydrogen_Helium_Argon_Beryllium",
             "1_How is the change in frequency of a wave (or other periodic event) for an observer moving relative to its source called?_Doppler Effect_Heisenberg's Uncertainty Principle_Spectrometric variable_Kepler's retroduction",
@@ -25,18 +48,4 @@ public class QuizApp {
             "18_Which planet is called the sister planet?_Venus_Mars_Mercury_Pluto",
             "19_How many extrasolar planets have been discover so far?_more than 4000_less than 10_exactly 642_none"
     };
-    private final ArrayList<Question> questions = new ArrayList<>();
-    public QuizApp() {
-        for (String question : QUESTIONS_ARRAY) {
-            questions.add(new Question(question));
-        }
-    }
-    
-    public static void main(String[] args) {
-        ArrayList<Question> questions = new ArrayList<>();
-        for (String question : QUESTIONS_ARRAY) {
-            questions.add(new Question(question));
-        }
-        questions.forEach(System.out::println);
-    }
 }

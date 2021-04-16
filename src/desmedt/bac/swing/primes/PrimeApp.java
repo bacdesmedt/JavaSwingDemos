@@ -1,4 +1,4 @@
-package mobile.bny.swing.primes;
+package desmedt.bac.swing.primes;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;

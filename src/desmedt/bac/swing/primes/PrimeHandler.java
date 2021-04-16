@@ -1,4 +1,4 @@
-package mobile.bny.swing.primes;
+package desmedt.bac.swing.primes;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
