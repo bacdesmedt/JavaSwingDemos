@@ -11,7 +11,7 @@ public class Question {
     
     public Question(String source) {
         final String[] data = source.split("_");
-        id = Integer.parseInt(data[0]) + 1;
+        id = Integer.parseInt(data[0]);
         question = data[1];
         answers.put(data[2], true);
         answers.put(data[3], false);
