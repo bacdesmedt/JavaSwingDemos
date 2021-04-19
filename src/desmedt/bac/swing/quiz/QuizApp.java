@@ -133,7 +133,7 @@ public class QuizApp extends JFrame implements ActionListener, QuizView.AnswerLi
             new Question("11_What is a pulsar?_A highly magnetized, rotating neutron star_A newborn star_A star about to go supernova_A highly magnetized, rotating planet"),
             new Question("12_How long is our sun estimated to live?_10 000 000 000 years_10 000 000 years_10 000 years_10 000 000 000 000 years"),
             new Question("13_Which of the following statements is false?_Saturn is the only ringed planet_Saturn is farthest planet visible with the naked eye_Saturn is the second biggest planet in our system_A Saturn year lasts 10 759 days"),
-            new Question("14_What type of galaxy is the Milky Way?_Spiral galaxy_Elliptical galaxy_Ring galaxy_Dwarf galaxy"),
+            new Question("14_What colorModel of galaxy is the Milky Way?_Spiral galaxy_Elliptical galaxy_Ring galaxy_Dwarf galaxy"),
             new Question("15_How often does a total solar eclipse occur on our planet?_Every 18 months_Every 300 years_Every 1080 days_Every month"),
             new Question("16_How hot is the surface of the sun?_5 505 °C_5 505 505 °C_555 °C_55 505 °C"),
             new Question("17_What remains of the sun after its nuclear reactions stops?_A white dwarf_A neutron star_A pulsar_A black hole"),
