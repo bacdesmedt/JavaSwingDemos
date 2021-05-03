@@ -1,1 +1,0 @@
-Small Apps I created using the Java Swing Framework inspired by various tutorials.
