@@ -1,6 +1,7 @@
 package desmedt.bac.swing.convert;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
 import java.text.DecimalFormat;
 
@@ -20,6 +21,10 @@ public class BTextField extends JTextField implements FocusListener, KeyListener
         this.listener = listener;
         this.addFocusListener(this);
         this.addKeyListener(this);
+        Dimension d = getPreferredSize();
+        d.width = 100;
+        d.height = 25;
+        setPreferredSize(d);
     }
     
     public void setValue (double value){

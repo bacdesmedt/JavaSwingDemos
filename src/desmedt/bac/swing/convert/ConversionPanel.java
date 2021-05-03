@@ -22,9 +22,9 @@ public class ConversionPanel extends JPanel implements BTextField.ValueChangeLis
         dataMap = new HashMap<>();
         labels = new JLabel[units.length];
         textFields = new BTextField[units.length];
-        
+
         setLayout(new GridLayout(units.length,2));
-        setBorder(BorderFactory.createEmptyBorder(50,50,50,50));
+        setBorder(BorderFactory.createEmptyBorder(50,100,50,100));
         
     
         for (int i = 0; i < units.length; i++) {
@@ -35,10 +35,6 @@ public class ConversionPanel extends JPanel implements BTextField.ValueChangeLis
             add(labels[i]);
             add(textFields[i]);
         }
-    }
-    
-    public void updateValues(Unit unit, double value) {
-    
     }
     
     @Override
@@ -53,4 +49,5 @@ public class ConversionPanel extends JPanel implements BTextField.ValueChangeLis
             }
         }
     }
+
 }

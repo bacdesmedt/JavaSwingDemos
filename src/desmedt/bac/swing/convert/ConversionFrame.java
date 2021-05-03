@@ -16,15 +16,15 @@ public class ConversionFrame extends JFrame {
         this.setTitle("Converter");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
-        this.setSize(new Dimension(500,300));
-//        this.pack();
-    
+//        this.setSize(new Dimension(500,300));
+
         tabs.add(distancePanel, distancePanel.title);
         tabs.add(massPanel, massPanel.title);
         tabs.add(tempPanel, tempPanel.title);
-    
+
         this.add(tabs);
-        
+
+        this.pack();
         this.setVisible(true);
         this.setLocationRelativeTo(null);
     }
