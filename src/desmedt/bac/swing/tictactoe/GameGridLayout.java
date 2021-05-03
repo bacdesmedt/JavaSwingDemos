@@ -8,13 +8,11 @@ import java.util.ArrayList;
 
 public class GameGridLayout extends JPanel implements ActionListener {
 
-    //INSTANCE VARIABLES
     private boolean[] Xs = new boolean[9];
     private boolean[] Os = new boolean[9];
     private XOButton[] buttons = new XOButton[9];
     private GridLayout grid = new GridLayout(3, 3);
 
-    //LISTENER
     private ArrayList<OnPlayListener> listeners = new ArrayList<>();
 
     public void addOnPlayListener(OnPlayListener listener) {
@@ -26,7 +24,6 @@ public class GameGridLayout extends JPanel implements ActionListener {
         void onEndTurn(boolean isPlayerX);
     }
 
-    //CONSTRUCTOR
     public GameGridLayout() {
         super();
         setLayout(grid);
