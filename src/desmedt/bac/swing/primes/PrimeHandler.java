@@ -55,7 +55,7 @@ public class PrimeHandler implements Runnable{
     
     public static boolean isPrime(int number) {
         
-        for (int i = 2; i < number / 2; i++)     //no factors > number/2 && < number exist
+        for (int i = 2; i <= Math.sqrt(number); i++)
             if (number % i == 0)
                 return false;
         
